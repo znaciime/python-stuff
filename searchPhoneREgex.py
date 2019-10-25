@@ -1,0 +1,10 @@
+import re
+phoneNumberRegex=re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo=phoneNumberRegex.search('somne number is 455-222-3333.')
+print('phone number is '+ mo.group())
+newNumberRegex=re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+mo2=newNumberRegex.search('my number is 765-888-3333')
+print(mo2.group(0))
+print(mo2.group(1))
+print(mo2.group(2))
+print(mo2.groups())
